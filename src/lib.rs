@@ -2,7 +2,25 @@ use libloading;
 use std::error::Error;
 use std::os::raw::{c_int, c_char};
 
-fn main() -> Result<(), Box<dyn Error>> {
+pub fn add(left: usize, right: usize) -> usize {
+    left + right
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn it_works() {
+        let result = add(2, 2);
+        assert_eq!(result, 4);
+    }
+}
+
+
+
+
+fn k_main() -> Result<(), Box<dyn Error>> {
     unsafe {
         let lib = libloading::Library::new("./mymodule.dll")?;
         //                                                    argc        argv

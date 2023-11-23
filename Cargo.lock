@@ -9,6 +9,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
+name = "hs-rs-ffi"
+version = "0.1.0"
+dependencies = [
+ "libloading",
+]
+
+[[package]]
 name = "libloading"
 version = "0.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -16,13 +23,6 @@ checksum = "c571b676ddfc9a8c12f1f3d3085a7b163966a8fd8098a90640953ce5f6170161"
 dependencies = [
  "cfg-if",
  "windows-sys",
-]
-
-[[package]]
-name = "plugin_test"
-version = "0.1.0"
-dependencies = [
- "libloading",
 ]
 
 [[package]]
